@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html> 
    <head> 
-      <script> 
-         //function that display value 
+      <script>  
          function dis(val) 
          { 
              document.getElementById("result").value+=val 
          } 
-
-         //function that evaluates the digit and return result 
          
         function solve() {
   let x = document.getElementById("result").value;
@@ -22,18 +19,15 @@
     
     document.getElementById("result").value = y;
   } catch (error) {
-    // Handle the error by displaying a message or taking appropriate action.
     document.getElementById("result").value = "Error";
   }
 } 
-           
-         //function that clear the display 
          function clr() 
          { 
              document.getElementById("result").value = "" 
          } 
       </script> 
-      <!-- for styling -->
+      
       <style> 
       body{
         padding-top: 5%;
@@ -69,19 +63,15 @@
       </style> 
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
    </head> 
-   <!-- create table -->
    <body> 
     <center>
       <div class = title > <h1 class="text-5xl p-4">Calculator</h1></div> 
       <table border="1"> 
          <tr> 
             <td colspan="3"><input class="text-4xl" type="text" id="result"/></td> 
-            <!-- clr() function will call clr to clear all value -->
             <td><input class="text-3xl" type="button" value="c" onclick="clr()"/> </td> 
          </tr> 
-         <tr> 
-            <!-- create button and assign value to each button -->
-            <!-- dis("1") will call function dis to display value -->
+         <tr>
             <td><input class="text-3xl"  type="button" value="1" onclick="dis('1')"/> </td> 
             <td><input class="text-3xl" type="button" value="2" onclick="dis('2')"/> </td> 
             <td><input class="text-3xl" type="button" value="3" onclick="dis('3')"/> </td> 
@@ -102,7 +92,6 @@
          <tr> 
             <td><input class="text-3xl" type="button" value="." onclick="dis('.')"/> </td> 
             <td><input class="text-3xl" type="button" value="0" onclick="dis('0')"/> </td> 
-            <!-- solve function call function solve to evaluate value -->
             <td><input class="text-3xl " type="button" value="=" onclick="solve()"/> </td> 
             <td><input class="text-3xl " type="button" value="*" onclick="dis('*')"/> </td> 
          </tr> 
